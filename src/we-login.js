@@ -14,13 +14,13 @@ let config = {
 };
 
 // this module is a f*cking piece of art
-const loginWeb = async () => {
+const loginWeb = async (opts={webBrowserPath:''}) => {
   return new Promise(async (resolve, reject) => {
     try {
       const browser = await puppeteer.launch({
         headless: false,
         args: ["--incognito"],
-        executablePath: browserPath(),
+        executablePath: opts.webBrowserPath || browserPath(),
         defaultViewport: false,
       });
 
@@ -96,4 +96,4 @@ const login = async (number, password) => {
 //   console.log(data);
 // })
 
-module.exports = login;
+module.exports = {login,loginWeb};
