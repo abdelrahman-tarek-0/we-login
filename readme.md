@@ -1,4 +1,4 @@
-# We Login
+# We TE Login
 
 simple module for login into we (telecom egypt) using web automation with puppeteer
 
@@ -11,7 +11,7 @@ npm install we-login
 ## Usage
 
 ```js
-const {login, loginWeb} = require('we-login');
+const {login, loginWeb} = require('we-te-login');
 
 // normal login useing functtion
 login('022713XXXX', '*********').then((res) => {
