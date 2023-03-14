@@ -2,7 +2,7 @@
   "name": "we-te-login",
   "version": "1.5.2",
   "description": "we login for login into we telecom egypt",
-  "main": "index.js",
+  "main": "src/we-login.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
