@@ -1,0 +1,24 @@
+{
+  "name": "we-login",
+  "version": "1.0.0",
+  "description": "we login for login into we telecom egypt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelrahman-tarek-0/we-login.git"
+  },
+  "keywords": [
+    "web-automation",
+    "we",
+    "telecom-egypt"
+  ],
+  "author": "https://github.com/abdelrahman-tarek-0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdelrahman-tarek-0/we-login/issues"
+  },
+  "homepage": "https://github.com/abdelrahman-tarek-0/we-login#readme"
+}
