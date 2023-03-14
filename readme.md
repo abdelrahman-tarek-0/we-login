@@ -1,11 +1,14 @@
 # We TE Login
+[![NPM version][npm-version-image]][npm-url]
+[![NPM downloads][npm-downloads-image]][npm-downloads-url]
+[![MIT License][license-image]][license-url]
 
 simple module for login into we (telecom egypt) using web automation with puppeteer
 
 ## Installation
 
 ```bash
-npm install we-login
+npm install we-te-login
 ```
 
 ## Usage
@@ -46,3 +49,12 @@ loginWeb({webBrowserPath:'apps/browser/firefox.exe'}).then((res) => {
 });
 
 ```
+
+[license-image]: https://img.shields.io/badge/license-ISC-blue.svg?style=flat
+[license-url]: LICENSE
+
+[npm-url]: https://npmjs.org/package/we-te-login
+[npm-version-image]: https://img.shields.io/npm/v/we-te-login.svg?style=flat
+
+[npm-downloads-image]: https://img.shields.io/npm/dm/we-te-login.svg?style=flat
+[npm-downloads-url]: https://npmcharts.com/compare/we-te-login?minimal=true
