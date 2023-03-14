@@ -17,12 +17,12 @@ let config = {
 const loginWeb = async (opts={webBrowserPath:''}) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const browserPath = browserPath()
-      if (!opts.webBrowserPath || !browserPath) throw new Error("no browser found")
+      const bPath = browserPath()
+      if (!opts.webBrowserPath || !bPath) throw new Error("no browser found")
       const browser = await puppeteer.launch({
         headless: false,
         args: ["--incognito"],
-        executablePath: opts.webBrowserPath || browserPath,
+        executablePath: opts.webBrowserPath || bPath,
         defaultViewport: false,
       });
 

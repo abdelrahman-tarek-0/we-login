@@ -1,6 +1,6 @@
 {
   "name": "we-te-login",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "we login for login into we telecom egypt",
   "main": "src/we-login.js",
   "scripts": {
