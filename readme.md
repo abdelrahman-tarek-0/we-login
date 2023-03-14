@@ -21,7 +21,20 @@ login('022713XXXX', '*********').then((res) => {
     console.log(res);
     res->{
          number: '022713XXXX',
-        password: 'T0da89******' //encrypted,
+        password: 'T0da89******' //encrypted with 'we' encryption algorithm,
+        token: 'eyJrdasdawddcvb...',
+        customerId: '101101xxx',
+        customerName: 'Ahmed'
+    }
+}).catch((err) => {
+    console.log(err);
+});
+
+login('022713XXXX', '*********',{skipEncryption:true}).then((res) => {
+    console.log(res);
+    res->{
+        number: '022713XXXX',
+        password: '**********' //not encrypted,
         token: 'eyJrdasdawddcvb...',
         customerId: '101101xxx',
         customerName: 'Ahmed'

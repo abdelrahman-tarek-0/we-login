@@ -43,12 +43,14 @@ const loginWeb = async (opts={webBrowserPath:''}) => {
   });
 };
 
-const login = async (number, password) => {
+const login = async (number, password,opts={skipEncryption:false}) => {
   const preTokenUrl =
     "https://api-my.te.eg/api/user/generatetoken?channelId=WEB_APP";
   const loginUrl = "https://api-my.te.eg/api/user/login?channelId=WEB_APP";
 
-  password = encrypt(password)
+  if (!opts.skipEncryption) {
+    password = encrypt(password)
+  }
   const payload = {
     body: {
       password: password,
