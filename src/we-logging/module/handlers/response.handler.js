@@ -14,7 +14,7 @@ module.exports = (userConfig) => async (response) => {
     
     userConfig.token = res?.body?.jwt
     userConfig.customerId = res?.header?.customerId
-    userConfig.customerId = res?.body?.customerName
+    userConfig.customerName = res?.body?.customerName
 
 
     if (res?.body && res?.body?.status === "2" && res?.body?.jwt) {

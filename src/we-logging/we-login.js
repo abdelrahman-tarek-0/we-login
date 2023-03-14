@@ -44,11 +44,12 @@ const loginWeb = async () => {
 const login = async (number, password) => {
   const preTokenUrl =
     "https://api-my.te.eg/api/user/generatetoken?channelId=WEB_APP";
-  const loginUrl = "`https://api-my.te.eg/api/user/login?channelId=WEB_APP`";
+  const loginUrl = "https://api-my.te.eg/api/user/login?channelId=WEB_APP";
 
+  password = encrypt(password)
   const payload = {
     body: {
-      password: encrypt(password),
+      password: password,
     },
 
     header: {
@@ -75,11 +76,24 @@ const login = async (number, password) => {
   const preToken = preTokenRes?.data?.body?.jwt;
   headers.Jwt = preToken;
 
+  let token = await axios.post(loginUrl, payload, {
+    headers,
+  });
 
-  console.log(preTokenRes);
+  if (!token?.data?.body?.jwt) throw new Error("wrong password or number");
+
+  customerId = token?.data?.header?.customerId;
+  customerName = token?.data?.body?.customerName;
+  token = token?.data?.body?.jwt;
+
+  return {number,password , token , customerId , customerName}
 };
 
-
-// loginWeb()
+// login('022xxx','*********').then((data)=>{
+//   console.log(data);
+// })
+// loginWeb().then((data)=>{
+//   console.log(data);
+// })
 
 module.exports = login;
