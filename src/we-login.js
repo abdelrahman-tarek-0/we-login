@@ -7,11 +7,7 @@ const resHandler = require("./module/handlers/response.handler");
 const emitter = require("./module/emitter/done");
 
 const encrypt = require("./utils/password-encryption");
-const puppeteer = require('puppeteer')
-const browserPath = require('get-browser-path')
-const reqHandler = require('./module/handlers/request.handler')
-const resHandler = require('./module/handlers/response.handler')
-const emitter = require('./module/emitter/done')
+
 
 let config = {
   number: "",
