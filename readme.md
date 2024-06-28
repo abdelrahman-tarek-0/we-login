@@ -1,3 +1,6 @@
+# ⚠️ Changes in WE login system making this package not working
+deprecated
+
 # We TE Login
 [![NPM version][npm-version-image]][npm-url]
 [![NPM downloads][npm-downloads-image]][npm-downloads-url]
